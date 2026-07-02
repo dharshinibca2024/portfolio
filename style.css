@@ -1,0 +1,419 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contact-btn{
+    position: fixed;      /* always top-right */
+    top: 20px;
+    right: 20px;
+
+    background: linear-gradient(135deg,#4f46e5,#06b6d4);
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.contact-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+/* Body Background - Night Theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("C:/Users/acer/Pictures/Yuga ma/night.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0ff; /* light bluish text */
+  padding: 40px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Rain Drops */
+.drop {
+  position: fixed;
+  top: -50px;
+  width: 8px;
+  height: 20px;
+  background: rgba(236, 237, 238, 0.6);
+  border-radius: 50%;
+  animation: rainFall 4s linear infinite;
+}
+
+@keyframes rainFall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.profile-heading{
+    font-size:45px;
+    text-align:center;
+    color:#00e5ff;
+    margin-bottom:25px;
+    text-shadow:0 0 20px #00e5ff;
+}
+
+.profile-card-content{
+    text-align:center;
+}
+
+.name{
+    font-size:36px;
+    color:#ffffff;
+    margin-top:15px;
+    margin-bottom:10px;
+    text-shadow:0 0 15px #00e5ff;
+}
+
+.role{
+    font-size:22px;
+    color:#00e5ff;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.profile-card-content p{
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #00e5ff;
+  text-shadow: 0 0 20px #00e5ff, 0 0 40px #000;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #00bfff;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px #00e5ff;
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Profile Image */
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 65%;
+  display: block;
+  float: right;
+  margin: 0 20px 20px 0;
+  box-shadow: 0 0 25px rgba(0,229,255,0.8);
+}
+
+/* Card Style */
+.card {
+  background: rgba(0,0,30,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0,229,255,0.4);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Education Layout */
+.edu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.edu-image img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,229,255,0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.edu-table th, .edu-table td {
+  border: 2px solid #00e5ff;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  color: #e0e0ff;
+}
+
+.edu-table th {
+  background: linear-gradient(to right, #001f3f, #003366);
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}/* Internship Section Layout */
+.intern-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* vertical center alignment */
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Internship Content - Left Side */
+.intern-content {
+  flex: 2;
+  background: rgba(0,0,30,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(0,229,255,0.4);
+  color: #e0e0ff;
+}
+
+/* Internship Image - Right Side */
+.intern-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;  /* right side */
+  align-items: center;
+}
+
+.intern-image img {
+  width: 330px;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0,229,255,0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* Skills */
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;   /* text left, image right */
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.skills-text h2 {
+  font-size: 28px;
+  color: #00e5ff;
+  text-shadow: 0 0 15px #00e5ff;
+  margin-bottom: 20px;
+}
+
+.skills-text ul {
+  list-style: none;
+}
+
+.skills-text li {
+  font-size: 20px;
+  color: #e0e0ff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.skills-image img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0,229,255,0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/* Left Side Image */
+.skills-image img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,229,255,0.8);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Right Side Circular Chain */
+.skills-chain {
+  display: flex;
+  flex-direction: row;   /* vertical chain */
+  gap: 25px;
+  position: relative;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(0,0,40,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,229,255,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+  transition: transform 0.3s ease;
+}
+
+
+.circle:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #00e5ff, #0077cc);
+  color: #fff;
+}
+
+
+
+/* Contact Button */
+
+.profile-card{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:350px;
+    padding:25px;
+    text-align:center;
+    background:rgba(0,0,40,0.95);
+    border-radius:20px;
+    box-shadow:0 0 25px #00e5ff;
+    z-index:999;
+}
+
+.profile-photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin-bottom:15px;
+    border:4px solid #00e5ff;
+}
+
+#closeBtn{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#00e5ff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Footer */
+body > p:last-child {
+  text-align: center;
+  font-size: 18px;
+  color: #00e5ff;
+  font-weight: bold;
+  text-shadow: 0 0 15px #00e5ff;
+  margin-top: 40px;
+}/* Center these sections */
+section{
+    text-align: center;
+}
+
+/* Remove bullets and center the list */
+section ul{
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+section ul li{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Project headings */
+section h3{
+    color: #00e5ff;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+section p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}a{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #ff4d4d;   /* Light Red */
+    text-decoration: underline;
+}
+/* Popup */
+.popup{
+    display: none;
+    position: fixed;
+    left: 20px;
+    bottom: 80px;   /* Button-க்கு மேல open ஆகும் */
+    width: 380px;
+    z-index: 9999;
+}
+
+.popup-content{
+    background: rgba(17,17,17,0.95);
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px cyan;
+}
+
+.popup-content input,
+.popup-content textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.popup-content button{
+    margin: 10px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
