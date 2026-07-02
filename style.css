@@ -36,7 +36,7 @@ body {
   color: #e0e0ff; /* light bluish text */
   padding: 40px;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 /* Rain Drops */
