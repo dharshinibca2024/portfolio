@@ -13,7 +13,7 @@ function validateForm() {
     let message = document.getElementById("message").value.trim();
     let error = document.getElementById("error");
 
-    error.innerHTML = "";
+    error.innerHTML = "";  
 
     if (name === "") {
         error.innerHTML = "Please enter your name";
