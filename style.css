@@ -31,7 +31,7 @@
 /* Body Background - Night Theme */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url("C:/Users/acer/Pictures/Yuga ma/night.jpeg") no-repeat center center fixed;
+  background: url("night.jpeg") no-repeat center center fixed;
   background-size: cover;
   color: #e0e0ff; /* light bluish text */
   padding: 40px;
